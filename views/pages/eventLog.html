@@ -35,33 +35,39 @@
     </div>
     </div>
      
-    <table class="table" id="newPostTable" ng-show="newPostVisable">
-      <thead>
-        <tr style="background:#0071bc">
-          <th></th> 
-          <th>Title</th>         
-          <th>Description</th>
-          <th>Event Type</th>
-          <th>Event Location</th>
-          <th></th>
-          <th>Action</th>
-          <th>&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:#0071bc">
-          <td></td>
-          <td><input type="text" class="form-control" ng-model="post.title" placeholder="Enter a title" name="title"></td>
-          <td><input type="text" class="form-control" ng-model="post.desc" placeholder="Enter a description" name="description"></td>
-          <td><input type="text" class="form-control" ng-model="post.type" placeholder="Enter an event type" name="sport"></td>
-          <td><input type="text" class="form-control" ng-model="post.location" placeholder="Enter the location postcode" name="location"></td>
-          <td style = "display:none"><input type="text"class="form-control" ng-model="post.lat" name="lat"></td>
-          <td style = "display:none"><input type="text" class="form-control" ng-model="post.long" name="long"></td>
-          <td><button class="btn btn-primary" ng-click="addPost()">Add Post</button></td>
-          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="clear()">Clear</button></td>
-        </tr>
-            </tbody>
-    </table>
+    <div class="row" ng-show="newPostVisable">
+        <div class="container container-table">
+          <div class="row vertical-center-row">
+            <div class="text-center col-md-4 col-md-offset-4 form-body-login">
+             <form name ="loginForm">
+              <h1>TrackR Login</h1>
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" ng-model="post.title" placeholder="Enter a title" name="title">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" ng-model="post.desc" placeholder="Enter a description" name="description">
+              </div>
+                 <div class="form-group">
+                <label for="type">Type</label>
+                <input type="text" class="form-control" ng-model="post.type" placeholder="Enter an event type" name="type">
+              </div>
+                 <div class="form-group">
+                <label for="location">Location</label>
+               <input type="text" class="form-control" ng-model="post.location" placeholder="Enter the location postcode" name="location">
+              </div>
+              <input style="display:none" type="text"class="form-control" ng-model="post.lat" name="lat"></td>
+              <input style="display:none" type="text" class="form-control" ng-model="post.long" name="long"></td>
+              <input  type="submit" class="btn btn-default" ng-click="addPost()" value="Add Post" />
+              <input  type="submit" class="btn btn-default" ng-click="update()" value="Update" />
+              <input  type="submit" class="btn btn-default" ng-click="clear()" value="Clear" />
+             </form>
+                <p ng-show="validationError" style="color:red">Incorrect email or password</p>
+            </div>
+          </div>
+        </div>
+    </div>
     <!--<div style="height:390px; overflow-y: scroll;">-->
     <div ng-repeat="post in postList | filter: searchText | orderBy: 'post.postDate':true" class="postList ">
        
