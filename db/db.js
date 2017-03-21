@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
 
-const url = 'mongodb://localhost:27017/aaf'
+const url = 'mongodb://gmarriott:dbpassword@ds137370.mlab.com:37370/project-db'
 var database
 
 module.exports.connect = function(){
