@@ -1,0 +1,82 @@
+/*.bg-overlay {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('/public/images/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height:100%;
+    padding-top: 50px;
+    width:100%;
+}*/
+
+
+.bg-overlay { 
+  background: url('/public/images/background-image.png') no-repeat center center fixed; 
+  background-size:cover;
+  position: absolute; 
+  color: #fff;
+  padding-top: 50px;
+  width: 100%;
+  height: 100%
+}
+
+.bg-overlay-alt { 
+  background: url('/public/images/background-image.png') no-repeat center center fixed; 
+  background-size:cover;
+  color: #fff;
+  padding-top: 50px;
+  width: 100%;
+  height: 100%
+}
+
+ input.ng-invalid.ng-dirty{
+ 	border:0.5px solid red;
+ }
+
+.form-body-register{
+
+	background:#0071bc;
+	height:500px;
+	border-radius: 5px;
+	opacity:0.9;
+}
+
+.form-body-home{
+
+	background:#0071bc;
+	height:300px;
+	border-radius: 5px;
+    opacity:0.9;
+}
+
+.form-body-account{
+
+	background:#0071bc;
+	height:520px;
+	border-radius: 5px;
+    opacity:0.9;
+
+}
+
+.form-body-login{
+
+	background:#0071bc;
+	height:300px;
+	border-radius: 5px;
+	opacity:0.9;
+}
+
+.postList{
+    background-color:#000;
+    margin:10px 20%;
+    padding:10px;
+    border-radius:8px;
+    opacity:0.9
+}
+
+.profileImg{
+    width:120px;
+    height:120px; 
+    border-radius: 50%;
+   
+}
