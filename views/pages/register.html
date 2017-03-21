@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="registerCtrl">
+<head>
+  <meta charset="UTF-8">
+  <title>TrackR | Register</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/customcss/custom.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/angular/angular.js"></script>
+<script src="/controllers/register.controller.js"></script>
+</head>
+<body>
+<ng-include src="'/includes/header.html'"></ng-include>
+
+<div class="container bg-overlay">
+  <div class="row">
+    <div class="container container-table">
+      <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4 form-body-register">
+          <form name="registerForm">
+          <h1>TrackR Register</h1>
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" class="form-control" ng-model="user.name" placeholder="Enter your name" name="name" required>
+                <span ng-show="registerForm.name.$dirty && registerForm.name.$error.required" style="color:red">Your name is required</span>
+            </div>
+            <div class="form-group ">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" ng-model="user.username" placeholder="Enter a username" name="username" ng-minLength="6" required>
+                <span ng-show="registerForm.username.$dirty && registerForm.username.$error.required" style="color:red">A username is required</span>
+                  <span ng-show="registerForm.username.$dirty && registerForm.username.$error.minlength" style="color:red">Username must be six characters</span>
+            </div>
+            <div class="form-group ">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" ng-model="user.email" placeholder="Enter email" name="email" required>
+                  <span ng-show="registerForm.email.$dirty && registerForm.email.$error.required" style="color:red">An email is required</span>
+                  <span ng-show="registerForm.email.$dirty && registerForm.email.$error.email" style="color:red">Must be a valid email</span>
+            </div>
+            <div class="form-group ">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" ng-model="user.password" placeholder="Password" name="password" ng-minLength="6" required>
+                  <span ng-show="registerForm.password.$dirty && registerForm.password.$error.required" style="color:red">A password is required</span>
+                <span ng-show="registerForm.password.$dirty && registerForm.password.$error.minlength" style="color:red">Password must be six characters</span>
+            </div>
+            <input ng-disabled="registerForm.$invalid" type="submit" class="btn btn-default" ng-click="registerUser(user)" value="Register" />
+          </form>
+            <p ng-show="registerSuccess" style="color:green">Register Successful</p>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+
+</body>
+</html>
+

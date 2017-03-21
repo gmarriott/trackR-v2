@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res) {
-  res.render('register');
+  res.render('pages/register');
 });
 //redirect to appropriate view
 
