@@ -2,7 +2,7 @@
 
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
+// const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -12,7 +12,7 @@ const database = require('./db/db.js');
 const app = express();
 const http = require('http').Server(app);
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 //api route
 //const api = require('./api/api');
