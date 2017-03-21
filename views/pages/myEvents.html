@@ -63,7 +63,7 @@
             </tbody>
     </table>
     <!--<div style="height:390px; overflow-y: scroll;">-->
-    <div ng-repeat="post in postList | filter: searchText | orderBy: 'post.postDate':true" class="postList ">
+    <div ng-repeat="post in postList | filter: searchText | orderBy: 'post.postDate':true" class="container ">
        
       <div class="text-center">
         <img class="profileImg text-center " ng-show="post.userDetails[0].profileImg[0] != null" src="{{post.userDetails[0].profileImg[0].path}}" /><br>
