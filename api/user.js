@@ -8,7 +8,7 @@ const router = express.Router();
 const database = require('../db/db.js'); //include database file for CRUD operations
 const bodyParser = require('body-parser');
 const multer = require('multer');
-const upload = multer({dest: './public/images'});
+const upload = multer({dest: process.env.PORT +'/public/images'});
 const jwt_secret = "b3015660";  
 router.use( bodyParser.json() );       // to support JSON-encoded bodies
 router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
